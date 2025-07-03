@@ -1,80 +1,140 @@
 # 🧠 TaskBoard Pro
 
-A minimal Trello-style Kanban app built in 3–4 days (~12 hours) to demonstrate advanced frontend state management using **NGXS**, **NGRX**, and **Redux**, with a fullstack architecture.
+A compact, fullstack Kanban-style task management app built in ~12 hours to showcase three modern state management patterns:
+
+- **NGXS** (for user authentication)
+- **NGRX** (for task and board management)
+- **Redux Toolkit** (for analytics in the admin dashboard)
 
 ---
 
-## 🚀 Tech Stack
+## 🔧 Tech Stack
 
-### 🌐 Frontend (Monorepo)
+### 🔹 Frontend
 
-- **Angular**
-  - `NGXS` for authentication state
-  - `NGRX` for board/task management
-- **React + Redux**
-  - Admin dashboard using `@reduxjs/toolkit`
+- **Angular 17+** (with NGXS + NGRX)
+- **Next.js 14+** (React + Redux Toolkit)
 
-### 🛠 Backend
+### 🔹 Backend
 
-- **Node.js + Express**
-- **MongoDB** (or JSON mock)
-- RESTful API structure
+- **Node.js + Express** REST API
+- **MongoDB** (or JSON mock database)
 
 ---
 
-## 📂 Monorepo Structure
+## 📁 Project Structure
 
-TaskBoardPro/
-├── backend/ # Node + Express REST API
-├── angular-client/ # Angular app using NGXS & NGRX
-├── react-admin/ # React + Redux admin dashboard
+```
+taskboard-pro/
+├── backend/              # Express + MongoDB REST API
+├── angular-client/       # Angular App (NGXS & NGRX)
+├── next-admin/           # Next.js Admin Dashboard (Redux Toolkit)
 └── README.md
+```
 
 ---
 
-## 🧩 Features
+## ✨ Key Features
 
-### 👤 Auth (NGXS - Angular)
+### 🔐 NGXS (Angular)
 
-- Login with token-based authentication
-- Store user in global NGXS state
+- User login / token storage
+- Auth state management
 
-### 🗂 Boards & Tasks (NGRX - Angular)
+### 📦 NGRX (Angular)
 
-- Create boards
-- Add/edit/delete tasks within boards
-- Status tracking: Todo, In Progress, Done
-- All state via NGRX actions, reducers, selectors
+- Create, edit, delete boards & tasks
+- Task status tracking (To-Do, In Progress, Done)
+- Full entity-based state handling
 
-### 📊 Admin Dashboard (Redux - React)
+### 📊 Redux Toolkit (Next.js)
 
-- Fetch all boards/tasks
-- Show task stats (counts, statuses, etc.)
-- Global Redux store using Redux Toolkit
+- Fetch board/task data
+- Display task status stats
+- Show board summary
 
 ---
 
-## 📦 API Endpoints (REST)
+## 📦 REST API Endpoints
 
-GET /api/boards
-POST /api/boards
-GET /api/boards/:id
-POST /api/boards/:id/tasks
-PUT /api/tasks/:id
+```
+GET    /api/boards
+POST   /api/boards
+GET    /api/boards/:id
+POST   /api/boards/:id/tasks
+PUT    /api/tasks/:id
 DELETE /api/tasks/:id
-POST /api/users/login
+POST   /api/users/login
+```
 
-## 🗓 Timeline
+---
 
-Phase Time Estimate
-Backend + NGXS auth 3 hrs
-NGRX (board/tasks) 3 hrs
-React Admin Dashboard 3 hrs
-UI polish & deployment 3 hrs
-Total ~12 hrs
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/taskboard-pro.git
+cd TaskBoardPro
+```
+
+### 2. Run Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+### 3. Run Angular App (NGXS/NGRX)
+
+```bash
+cd ../angular-client
+npm install
+ng serve
+```
+
+### 4. Run Next.js Admin Dashboard
+
+```bash
+cd ../next-admin
+npm install
+npm run dev
+```
+
+---
+
+## 🗓️ Timeline (3–4 Days)
+
+| Task                      | Time Estimate |
+| ------------------------- | ------------- |
+| Backend API + Auth (NGXS) | 3 hrs         |
+| Board & Task State (NGRX) | 3 hrs         |
+| Admin Dashboard (Redux)   | 3 hrs         |
+| UI Polish + Deploy        | 3 hrs         |
+| **Total**                 | **~12 hrs**   |
+
+---
+
+## 🧠 Learning Highlights
+
+- NGXS for token-based login and state snapshotting
+- NGRX for scalable task/board entities with effects
+- Redux Toolkit with async thunks and selectors
+- Integration across three frontend frameworks
+
+---
+
+## 🖼️ Screenshots
+
+_Add UI screenshots or a video demo here._
+
+---
 
 ## 📜 License
 
-JG
+© Josy George
 
-    Built with in a time-boxed challenge to explore cross-framework state management techniques.
+---
+
+> Built with ❤️ to demonstrate multi-state management and cross-framework skills in a focused timeframe.
