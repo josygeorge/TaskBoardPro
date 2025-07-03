@@ -10,6 +10,8 @@ A compact, fullstack Kanban-style task management app built in ~12 hours to show
 
 ## 🔧 Tech Stack
 
+This project is fully developed in **TypeScript** across all major components for type safety and maintainability.
+
 ### 🔹 Frontend
 
 - **Angular 17+** (with NGXS + NGRX)
