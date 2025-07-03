@@ -55,6 +55,12 @@ taskboard-pro/
 
 ---
 
+## 📁 Monorepo Project Structure
+
+This is a monorepo setup that houses three separate apps—backend API, Angular client, and a Next.js admin dashboard—all under a single repository.
+
+---
+
 ## 📦 REST API Endpoints
 
 ```
