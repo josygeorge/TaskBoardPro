@@ -1,5 +1,15 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
+# Angular build artifacts
+dist/
+build/
 
+# Node modules
+node_modules/
+
+# Environment files
+src/environments/environment.ts
+src/environments/environment.prod.ts
+.env
 # compiled output
 /dist
 /tmp
@@ -44,3 +54,22 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+.DS_Store
+
+# System files
+Thumbs.db
+
+# Test coverage / logs
+coverage/
+*.log
+
+# OS-specific metadata
+ehthumbs.db
+Icon?
+
+# Optional TSLint logs or outputs (none by default)
+tslint-report.json
